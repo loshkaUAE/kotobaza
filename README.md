@@ -1,6 +1,6 @@
-# kotobaza — Bybit Analyzer Dashboard
+# kotobaza — Bybit Analyzer Dashboard (Python)
 
-Крутой dashboard-анализатор для Bybit с безопасным хранением API ключей на сервере.
+Крутой dashboard-анализатор для Bybit, полностью на Python (stdlib backend, без Node.js).
 
 ## Что умеет
 
@@ -13,9 +13,12 @@
 ## Быстрый старт
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 cp .env.example .env
 # вставь свои BYBIT_API_KEY и BYBIT_API_SECRET
-npm start
+python app.py
 ```
 
 Открой: `http://localhost:3000`
@@ -31,5 +34,5 @@ npm start
 ## Проверка
 
 ```bash
-npm run check
+python -m py_compile app.py
 ```
