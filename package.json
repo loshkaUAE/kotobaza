@@ -1,0 +1,11 @@
+{
+  "name": "kotobaza-bybit-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bybit analyzer dashboard with secure API key handling",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  }
+}

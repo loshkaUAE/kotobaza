@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bybit Analyzer Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>🚀 Bybit Analyzer Dashboard</h1>
+        <p>Твой личный трейдинг-анализатор с безопасной работой API ключей на сервере.</p>
+        <button id="refreshBtn">Обновить данные</button>
+      </header>
+
+      <section id="status" class="status">Загрузка...</section>
+
+      <section class="cards">
+        <article class="card">
+          <h2>Total Equity</h2>
+          <p id="totalEquity">—</p>
+        </article>
+        <article class="card">
+          <h2>Total Wallet Balance</h2>
+          <p id="totalWalletBalance">—</p>
+        </article>
+        <article class="card">
+          <h2>Open Positions</h2>
+          <p id="openPositions">—</p>
+        </article>
+        <article class="card">
+          <h2>Unrealised PnL</h2>
+          <p id="totalPnl">—</p>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h3>Баланс по монетам</h3>
+          <table>
+            <thead>
+              <tr><th>Coin</th><th>Wallet</th><th>USD Value</th></tr>
+            </thead>
+            <tbody id="balancesBody"></tbody>
+          </table>
+        </article>
+
+        <article class="panel">
+          <h3>Открытые позиции</h3>
+          <table>
+            <thead>
+              <tr><th>Symbol</th><th>Side</th><th>Size</th><th>PnL</th></tr>
+            </thead>
+            <tbody id="positionsBody"></tbody>
+          </table>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h3>Рынок (24h)</h3>
+        <table>
+          <thead>
+            <tr><th>Symbol</th><th>Last Price</th><th>24h %</th><th>Turnover</th></tr>
+          </thead>
+          <tbody id="marketBody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
